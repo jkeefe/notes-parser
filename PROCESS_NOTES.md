@@ -20,9 +20,11 @@ Key table seems to be `ZICCLOUDSYNCINGOBJECT`
 
 ### Facet by folder
 
-http://127.0.0.1:8001/NoteStore/ZICCLOUDSYNCINGOBJECT?_facet=ZFOLDER
+http://127.0.0.1:8001/NoteStore/ZICCLOUDSYNCINGOBJECT?_facet=ZFOLDER (only works if Datasette is running locally.)
 
 Folder `56` looks like the one I want. (It's my "projects" folder.)
+
+### Query titles & snippets
 
 My query: 
 
@@ -33,7 +35,7 @@ where ZFOLDER = 56
 order by ZMODIFICATIONDATE1 desc
 ```
 
-... which is this URL:
+... which is this URL (if Datasette is running locally):
 
 http://127.0.0.1:8001/NoteStore?sql=select+ZFOLDER%2CZMODIFICATIONDATE1%2CZIDENTIFIER%2CZTITLE1%2CZSNIPPET%0D%0Afrom+ZICCLOUDSYNCINGOBJECT%0D%0Awhere+ZFOLDER+%3D+56%0D%0Aorder+by+ZMODIFICATIONDATE1+desc
 
